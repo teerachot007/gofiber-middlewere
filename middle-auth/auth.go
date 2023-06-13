@@ -115,9 +115,12 @@ func authSuccess(c *fiber.Ctx) error {
 	return nil
 }
 
-func Getclaims(c *fiber.Ctx) []byte {
+func Getclaims(c *fiber.Ctx, value interface{}) {
 	user := c.Locals("user").(*jwt.Token)
 	claims := user.Claims.(jwt.MapClaims)
 	d, _ := json.Marshal(claims)
-	return d
+	err := json.Unmarshal([]byte(string(d)), &value)
+	if err != nil {
+		panic(err)
+	}
 }
