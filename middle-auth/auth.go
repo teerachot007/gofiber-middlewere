@@ -26,7 +26,6 @@ func GenKey() *rsa.PrivateKey {
 	rng := rand.Reader
 	var err error
 	pk, err := rsa.GenerateKey(rng, 2048)
-	// fmt.Println(privateKey)
 	if err != nil {
 		log.Fatalf("rsa.GenerateKey: %v", err)
 	}
