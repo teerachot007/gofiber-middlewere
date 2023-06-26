@@ -1,4 +1,4 @@
-package tools
+package middletools
 
 import (
 	"log"
