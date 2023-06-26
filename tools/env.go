@@ -6,8 +6,8 @@ import (
 	"os"
 )
 
-func Init_Env() {
-	err := godotenv.Load(".env")
+func Init_Env(file_env_name string) {
+	err := godotenv.Load(file_env_name)
 	if err != nil {
 		log.Fatal("Error loading .env file")
 	}
