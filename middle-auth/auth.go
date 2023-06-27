@@ -6,10 +6,8 @@ import (
 	"fmt"
 	"log"
 	"time"
-
 	"crypto/rand"
 	"crypto/rsa"
-
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/utils"
 	jwtware "github.com/gofiber/jwt/v3"
